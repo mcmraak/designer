@@ -11,6 +11,10 @@ class Designer
         $salary;
 
 
+    /**
+     * Функция загрузки данных с внешнего источника
+     * @throws Exception
+     */
     public function load()
     {
         $html = file_get_contents('https://zety.com/blog/graphic-designer-resume');
@@ -22,7 +26,6 @@ class Designer
 
         # Получить аватар
         $this->avatar = $this->getAvatarSRC($html);
-
     }
 
     /**
