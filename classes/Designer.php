@@ -75,7 +75,7 @@ class Designer
      * @return string - Фрагмент строки между начальным и конечным вхождениями
      * @throws Exception
      */
-    function wordBetweenWords(string $entry_start, string $entry_end, string $string): string
+    protected function wordBetweenWords(string $entry_start, string $entry_end, string $string): string
     {
         if(!$entry_start || !$entry_end || !$string)
             throw new Exception('Input data error');
@@ -93,7 +93,7 @@ class Designer
      * @return string
      * @throws Exception
      */
-    function Calc($class): string
+    protected function Calc($class): string
     {
         $class = intval($class);
         if($class < 1 || $class > 3)
